@@ -1,6 +1,6 @@
 {
   "name": "korean-random-words",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple, lightweight random word string generator in Korean",
   "main": "index.js",
   "scripts": {
