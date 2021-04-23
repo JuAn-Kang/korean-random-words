@@ -14,7 +14,7 @@
 
 > TLDR: I needed a quick not-so-boring random generator with several million combinations.
 
-- 🌏 View README in... [![korean-badge](https://img.shields.io/static/v1?label=%EA%B0%80&message=%ED%95%9C%EA%B5%AD%EC%96%B4&color=eeeeee&style=for-the-badge)](https://github.com/JuAn-Kang/korean-random-words/blob/main/README/README_KR.md)[![korean-badge](https://img.shields.io/static/v1?label=A&message=English&color=333333&style=for-the-badge)](https://github.com/JuAn-Kang/korean-random-words#readme)
+- 🌏 View README in... [![korean-badge](https://img.shields.io/static/v1?label=%EA%B0%80&message=%ED%95%9C%EA%B5%AD%EC%96%B4&color=eeeeee&style=for-the-badge)](https://github.com/JuAn-Kang/korean-random-words/blob/main/README/README_KR.md) | [![korean-badge](https://img.shields.io/static/v1?label=A&message=English&color=333333&style=for-the-badge)](https://github.com/JuAn-Kang/korean-random-words#readme)
 
 
 
