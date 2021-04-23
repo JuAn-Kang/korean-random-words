@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
@@ -16,7 +16,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var _words = require("./assets/words");
+var _words = require('./assets/words');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -28,7 +28,7 @@ var PhraseGen = function () {
   function PhraseGen() {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
         _ref$delimiter = _ref.delimiter,
-        delimiter = _ref$delimiter === undefined ? "-" : _ref$delimiter,
+        delimiter = _ref$delimiter === undefined ? '-' : _ref$delimiter,
         _ref$customNouns = _ref.customNouns,
         customNouns = _ref$customNouns === undefined ? null : _ref$customNouns,
         _ref$customAdjectives = _ref.customAdjectives,
@@ -55,9 +55,9 @@ var PhraseGen = function () {
 
 
   _createClass(PhraseGen, [{
-    key: "generatePhrase",
+    key: 'generatePhrase',
     value: function generatePhrase() {
-      return [getRandElem(this.adjectives) + (this.adjSuffix || getRandElem(_words.firstAdjSuffixes)), getRandElem(this.adjectives) + "한", getRandElem(this.nouns)].join(this.delimiter);
+      return [getRandElem(this.adjectives) + (this.adjSuffix || getRandElem(_words.firstAdjSuffixes)), getRandElem(this.adjectives) + '\uD55C', getRandElem(this.nouns)].join(this.delimiter);
     }
 
     /**
@@ -68,7 +68,7 @@ var PhraseGen = function () {
      */
 
   }, {
-    key: "getNoun",
+    key: 'getNoun',
     value: function getNoun() {
       return getRandElem(this.nouns);
     }
@@ -83,9 +83,9 @@ var PhraseGen = function () {
      */
 
   }, {
-    key: "getAdjective",
+    key: 'getAdjective',
     value: function getAdjective() {
-      var suffix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "하다";
+      var suffix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '하다';
 
       return getRandElem(this.adjectives) + suffix;
     }
@@ -98,7 +98,7 @@ var PhraseGen = function () {
      */
 
   }, {
-    key: "set",
+    key: 'set',
     value: function set(props) {
       var _this = this;
 

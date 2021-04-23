@@ -12,18 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { nouns, adjectives, firstAdjSuffixes } from "./assets/words";
+import { nouns, adjectives, firstAdjSuffixes } from './assets/words';
 
 const getRandElem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 class PhraseGen {
   constructor({
-    delimiter = "-",
+    delimiter = '-',
     customNouns = null,
     customAdjectives = null,
     adjSuffix = null,
   } = {}) {
-    
     this.adjSuffix = adjSuffix;
     this.nouns = customNouns || nouns;
     this.adjectives = customAdjectives || adjectives.concat(customAdjectives);
@@ -40,9 +39,9 @@ class PhraseGen {
    */
   generatePhrase() {
     return [
-      getRandElem(this.adjectives) +
-        (this.adjSuffix || getRandElem(firstAdjSuffixes)),
-      getRandElem(this.adjectives) + "한",
+      getRandElem(this.adjectives)
+        + (this.adjSuffix || getRandElem(firstAdjSuffixes)),
+      `${getRandElem(this.adjectives)}한`,
       getRandElem(this.nouns),
     ].join(this.delimiter);
   }
@@ -65,7 +64,7 @@ class PhraseGen {
    * @return {string}
    * @memberof PhraseGen
    */
-  getAdjective(suffix = "하다") {
+  getAdjective(suffix = '하다') {
     return getRandElem(this.adjectives) + suffix;
   }
 

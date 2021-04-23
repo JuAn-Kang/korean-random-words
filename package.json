@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run build && mocha dist/index.test.js",
-    "build": "babel src -d dist"
+    "build": "babel src -d dist",
+    "lint": "npx eslint src/* --ext .js",
+    "pretty": "npx eslint --fix src/* --ext .js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -24,12 +27,12 @@
   "license": "Apache-2.0",
   "funding": [
     {
-      "type" : "kakaopay-mobile",
-      "url" : "https://qr.kakaopay.com/281006011000066782745246"
+      "type": "kakaopay-mobile",
+      "url": "https://qr.kakaopay.com/281006011000066782745246"
     },
     {
-      "type" : "buy me a coffee",
-      "url" : "https://www.buymeacoffee.com/doubtfulmr"
+      "type": "buy me a coffee",
+      "url": "https://www.buymeacoffee.com/doubtfulmr"
     }
   ],
   "bugs": {
@@ -39,6 +42,10 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0",
     "mocha": "^8.3.2",
     "request": "^2.88.2"
   }
