@@ -19,7 +19,7 @@ describe("default constructor", () => {
   });
 
   it("getAdjective returns custom suffixed adj when supplied", () => {
-    const adj = generator.getAdjective({suffix: "해요"});
+    const adj = generator.getAdjective("해요");
     assert(adj.substr(-2) === "해요")
     assert(generator.adjectives.includes(adj.slice(0,adj.length - 2)))
   });

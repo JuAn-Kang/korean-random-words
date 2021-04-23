@@ -65,7 +65,7 @@ class PhraseGen {
    * @return {string}
    * @memberof PhraseGen
    */
-  getAdjective({ suffix = "하다" } = {}) {
+  getAdjective(suffix = "하다") {
     return getRandElem(this.adjectives) + suffix;
   }
 

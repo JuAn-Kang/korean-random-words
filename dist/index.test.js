@@ -28,7 +28,7 @@ describe("default constructor", function () {
   });
 
   it("getAdjective returns custom suffixed adj when supplied", function () {
-    var adj = generator.getAdjective({ suffix: "해요" });
+    var adj = generator.getAdjective("해요");
     (0, _assert2.default)(adj.substr(-2) === "해요");
     (0, _assert2.default)(generator.adjectives.includes(adj.slice(0, adj.length - 2)));
   });
