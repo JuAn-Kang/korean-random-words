@@ -99,3 +99,14 @@ describe('fully configured constructor', function () {
     _assert2.default.strictEqual(generator.generatePhrase(), '말랑하고..말랑한..말랑이');
   });
 });
+
+describe('default dictionaries: ', function () {
+  var generator = new _index2.default();
+  it('all nouns are unique', function () {
+    _assert2.default.strictEqual(new Set(generator.nouns).size, generator.nouns.length);
+  });
+
+  it('all adjectives are unique', function () {
+    _assert2.default.strictEqual(new Set(generator.adjectives).size, generator.adjectives.length);
+  });
+});

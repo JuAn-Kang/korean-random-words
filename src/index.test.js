@@ -86,3 +86,14 @@ describe('fully configured constructor', () => {
     assert.strictEqual(generator.generatePhrase(), '말랑하고..말랑한..말랑이');
   });
 });
+
+describe('default dictionaries: ', () => {
+  const generator = new PhraseGen();
+  it('all nouns are unique', () => {
+    assert.strictEqual(new Set(generator.nouns).size, generator.nouns.length);
+  });
+
+  it('all adjectives are unique', () => {
+    assert.strictEqual(new Set(generator.adjectives).size, generator.adjectives.length);
+  });
+});

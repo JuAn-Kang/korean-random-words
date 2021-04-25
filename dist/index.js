@@ -29,18 +29,15 @@ var PhraseGen = function () {
     var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
         _ref$delimiter = _ref.delimiter,
         delimiter = _ref$delimiter === undefined ? '-' : _ref$delimiter,
-        _ref$customNouns = _ref.customNouns,
-        customNouns = _ref$customNouns === undefined ? null : _ref$customNouns,
-        _ref$customAdjectives = _ref.customAdjectives,
-        customAdjectives = _ref$customAdjectives === undefined ? null : _ref$customAdjectives,
-        _ref$adjSuffix = _ref.adjSuffix,
-        adjSuffix = _ref$adjSuffix === undefined ? null : _ref$adjSuffix;
+        customNouns = _ref.customNouns,
+        customAdjectives = _ref.customAdjectives,
+        adjSuffix = _ref.adjSuffix;
 
     _classCallCheck(this, PhraseGen);
 
     this.adjSuffix = adjSuffix;
     this.nouns = customNouns || _words.nouns;
-    this.adjectives = customAdjectives || _words.adjectives.concat(customAdjectives);
+    this.adjectives = customAdjectives || _words.adjectives;
     this.delimiter = delimiter;
 
     Object.preventExtensions(this);

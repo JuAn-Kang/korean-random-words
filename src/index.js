@@ -19,13 +19,13 @@ const getRandElem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 class PhraseGen {
   constructor({
     delimiter = '-',
-    customNouns = null,
-    customAdjectives = null,
-    adjSuffix = null,
+    customNouns,
+    customAdjectives,
+    adjSuffix,
   } = {}) {
     this.adjSuffix = adjSuffix;
     this.nouns = customNouns || nouns;
-    this.adjectives = customAdjectives || adjectives.concat(customAdjectives);
+    this.adjectives = customAdjectives || adjectives;
     this.delimiter = delimiter;
 
     Object.preventExtensions(this);
