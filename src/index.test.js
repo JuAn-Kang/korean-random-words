@@ -8,6 +8,10 @@ describe('default constructor', () => {
     assert(generator.generatePhrase().split('-').length === 3);
   });
 
+  it('successfully returns the array form if configured', () => {
+    assert(generator.generatePhrase({ array: true }).length === 3);
+  });
+
   it('getNoun returns a noun', () => {
     assert(generator.nouns.includes(generator.getNoun()));
   });

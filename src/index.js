@@ -37,13 +37,15 @@ class PhraseGen {
    * @return {string} - [adj]-[adj]-[noun]
    * @memberof PhraseGen
    */
-  generatePhrase() {
-    return [
+  generatePhrase({ array = false } = {}) {
+    const phraseBlocks = [
       getRandElem(this.adjectives)
         + (this.adjSuffix || getRandElem(firstAdjSuffixes)),
       `${getRandElem(this.adjectives)}한`,
       getRandElem(this.nouns),
-    ].join(this.delimiter);
+    ];
+
+    return array ? phraseBlocks : phraseBlocks.join(this.delimiter);
   }
 
   /**

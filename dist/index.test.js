@@ -17,6 +17,10 @@ describe('default constructor', function () {
     (0, _assert2.default)(generator.generatePhrase().split('-').length === 3);
   });
 
+  it('successfully returns the array form if configured', function () {
+    (0, _assert2.default)(generator.generatePhrase({ array: true }).length === 3);
+  });
+
   it('getNoun returns a noun', function () {
     (0, _assert2.default)(generator.nouns.includes(generator.getNoun()));
   });

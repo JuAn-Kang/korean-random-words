@@ -54,7 +54,13 @@ var PhraseGen = function () {
   _createClass(PhraseGen, [{
     key: 'generatePhrase',
     value: function generatePhrase() {
-      return [getRandElem(this.adjectives) + (this.adjSuffix || getRandElem(_words.firstAdjSuffixes)), getRandElem(this.adjectives) + '\uD55C', getRandElem(this.nouns)].join(this.delimiter);
+      var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+          _ref2$array = _ref2.array,
+          array = _ref2$array === undefined ? false : _ref2$array;
+
+      var phraseBlocks = [getRandElem(this.adjectives) + (this.adjSuffix || getRandElem(_words.firstAdjSuffixes)), getRandElem(this.adjectives) + '\uD55C', getRandElem(this.nouns)];
+
+      return array ? phraseBlocks : phraseBlocks.join(this.delimiter);
     }
 
     /**
@@ -99,10 +105,10 @@ var PhraseGen = function () {
     value: function set(props) {
       var _this = this;
 
-      Object.entries(props).forEach(function (_ref2) {
-        var _ref3 = _slicedToArray(_ref2, 2),
-            k = _ref3[0],
-            v = _ref3[1];
+      Object.entries(props).forEach(function (_ref3) {
+        var _ref4 = _slicedToArray(_ref3, 2),
+            k = _ref4[0],
+            v = _ref4[1];
 
         _this[k] = v;
       });
